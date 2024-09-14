@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, rgb(253, 253, 255), #3976d8);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the app */
+.app-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Title of the app */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Input field and buttons container */
+.input-container {
+  /* display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; */
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Style for input field */
+.input-container input {
+  width: 70%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #007bff;
+}
+
+/* Add/update button */
+.input-container button {
+  width: 25%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #218838;
+}
+
+/* Task list container */
+.task-list {
+  margin-top: 20px;
+}
+
+/* Individual task container */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.task:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Completed task text styling */
+.task.completed span {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Buttons for each task */
+.task-buttons button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Complete/incomplete button */
+.task-buttons button:first-child {
+  background-color: #007bff;
+}
+
+.task-buttons button:first-child:hover {
+  background-color: #0056b3;
+}
+
+/* Edit button */
+.task-buttons button:nth-child(2) {
+  background-color: #ffc107;
+}
+
+.task-buttons button:nth-child(2):hover {
+  background-color: #e0a800;
+}
+
+/* Delete button */
+.task-buttons button:last-child {
+  background-color: #dc3545;
+}
+
+.task-buttons button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container input,
+  .input-container button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .task-buttons {
+    flex-direction: column;
+  }
+
+  .task-buttons button {
+    margin: 5px 0;
+  }
+}
